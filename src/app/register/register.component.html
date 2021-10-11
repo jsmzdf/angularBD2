@@ -1,0 +1,42 @@
+<div class="login-box">
+    <!--<img src="img/logo.jpg" class="avatar" alt="Avatar Image">-->
+    <h1>Registro de Clientes</h1>
+    <div>
+        <label for="PrimerNombre">nombre</label>
+        <input type="text" placeholder="Primer nombre" [(ngModel)]="registro.Nombre">
+
+        <label for="PrimerApellido">Apellido</label>
+        <input type="text" placeholder="Primer Apellido" [(ngModel)]="registro.Apellido">
+
+        <label for="email">Correo electronico</label>
+        <input type="text" placeholder="Correo electronico" [(ngModel)]="registro.correo">
+
+        <label for="email"> Contraseña</label>
+        <input type="password" placeholder="Contraseña" [(ngModel)]="registro.clave">
+        <label for="Telefono">Teléfono</label>
+        <input type="text" placeholder="Telefono" [(ngModel)]="registro.telefono">
+
+        <label for="Ciudad ">Ciudad</label>
+        <input type="text" placeholder="Ciudad " [(ngModel)]="registro.ciudad">
+        <label for="Direccion ">Dirección</label>
+        <input type="text" placeholder="Direccion " [(ngModel)]="registro.direccion">
+        <label for="Representante ">ID Representante que lo captó</label>
+        <input type="text" placeholder="Representante" [(ngModel)]="registro.idRep">
+        <!--Si es representante-->
+        <label for="Representante ">¿Es representante?</label>
+        <input type="checkbox" [(ngModel)]="registro.esRep" ng-true-value="true" ng-false-value="false">
+        <div *ngIf="registro.esRep>=true">
+            <label for="FechaContrato ">Fecha de contrato</label>
+            <input type="text" placeholder="FechaContrato " [(ngModel)]="registro.fechaContr">
+            <label for="FechaContrato ">Fecha de nacimiento</label>
+            <input type="text" placeholder="FechaContrato " [(ngModel)]="registro.fechaNacio">
+            <label for="FechaContrato ">Género</label>
+            <input type="text" placeholder="FechaContrato " [(ngModel)]="registro.genero">
+            <label for="Regional ">Regional</label>
+            <input type="text" placeholder="Regional " [(ngModel)]="registro.regional">
+        </div>
+        <input type="submit" value="Ingresar " (click)="validar(); ">
+
+    </div>
+    <p></p>
+</div>

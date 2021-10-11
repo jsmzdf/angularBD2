@@ -1,0 +1,16 @@
+<div class="login-box">
+    <img src="assets/img/logo.jpg" class="avatar" alt="Avatar Image">
+
+    <h1>Inicio de sesion</h1>
+    <div>
+        <!-- USERNAME INPUT -->
+        <label for="username">Correo</label>
+        <input type="text" [(ngModel)]="usuario" placeholder="Correo">
+        <!-- PASSWORD INPUT -->
+        <label for="password">Contraseña</label>
+        <input type="password" [(ngModel)]="clave" placeholder="Contraseña">
+        <input type="submit" (click)="getUSuario();" value="Ingresar">
+        <a href="#">¿Olvidaste tu contraseña?</a><br>
+    </div>
+    <p>sdfsdfsd:{{lst}}</p>
+</div>
